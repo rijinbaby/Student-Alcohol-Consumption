@@ -12,8 +12,6 @@
   if(!require("pacman")) install.packages("pacman")
   pacman::p_load(readr,skimr,purrr,dplyr,plyr,ggplot2,gridExtra,rpart.plot,caret,randomForest,corrgram,corrplot)
   
-  # ,, dplyr, , VIM, ggplot2, plotly,caret,fastDummies,randomForest
-  # ,ClusterR,glmnet,leaps,gbm,Rtsne,dendextend,fossil
   
   #Load Packages
   {
@@ -324,23 +322,6 @@
   View(cor(student_final_data[,c(3,13,14,15,24,25,26,27,28,29,30,34)]))
   
   corrgram(student_final_data[,c(3,13,14,15,24,25,26,27,28,29,30,34)],lower.panel=panel.cor,upper.panel=panel.pie, cor.method = "pearson")
-  
-  # M1<-cor(data.frame(model.matrix( ~.-1, data=student_final_data[,c(3,13,14,15,24,25,26,27,28,29,30,34)])))
-  # 
-  # col <- colorRampPalette(c("#BB4444", "#EE9988", "#FFFFFF", "#77AADD", "#4477AA"))
-  # corrplot(M1, method="color", col=col(200),
-  #          type="upper",order="hclust", 
-  #          addCoef.col = "black", # Add coefficient of correlation,
-  #          
-  #          tl.col="black", tl.srt=45, #Text label color and rotation
-  #          tl.cex = 2.5,
-  #          number.cex = 2,
-  #          cl.cex = 3,
-  #          # Combine with significance
-  #          # hide correlation coefficient on the principal diagonal
-  #          diag=FALSE
-           
-  # )
   
 }
 
